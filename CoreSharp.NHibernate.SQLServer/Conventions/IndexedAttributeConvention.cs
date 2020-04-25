@@ -5,7 +5,7 @@ using FluentNHibernate.Conventions.Instances;
 
 #nullable disable
 
-namespace CoreSharp.NHibernate.Conventions
+namespace CoreSharp.NHibernate.SQLServer.Conventions
 {
     public class IndexedAttributeConvention : AttributePropertyConvention<IndexAttribute>, IReferenceConvention
     {

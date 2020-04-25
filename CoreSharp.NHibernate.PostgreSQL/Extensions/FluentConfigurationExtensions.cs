@@ -96,6 +96,10 @@ namespace CoreSharp.NHibernate.PostgreSQL.Extensions
                     persistenceModel.Conventions.Add(typeof(DefaultValueAttributeConvention));
                     persistenceModel.Conventions.Add(typeof(CitextConvention));
                     persistenceModel.Conventions.Add(typeof(PostgresqlHiLoIdConvention), new PostgresqlHiLoIdConvention(cfg));
+                    persistenceModel.Conventions.Add(typeof(IndexedAttributeConvention), new IndexedAttributeConvention(cfg));
+                    persistenceModel.Conventions.Add(typeof(UniqueAttributeConvention), new UniqueAttributeConvention(cfg));
+                    persistenceModel.Conventions.Add(typeof(ForeignKeyColumnNameConvention), new ForeignKeyColumnNameConvention(cfg));
+                    persistenceModel.Conventions.Add(typeof(ForeignKeyNameConvention), new ForeignKeyNameConvention(cfg));
                 }
             });
         }
